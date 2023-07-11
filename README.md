@@ -1,14 +1,9 @@
-## Getting Started
-
-This repository includes files with plain SQL that can be used to recreate a database:
-
-- Use [schema.sql](./schema.sql) to create all tables.
-- Use [data.sql](./data.sql) to populate tables with sample data.
-- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. 
-
-**Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
-
 <a name="readme-top"></a>
+
+<div align="center">
+  <h3>Vet Clinic Database</h3>
+
+</div>
 
 <!-- TABLE OF CONTENTS -->
 
@@ -33,7 +28,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 # 📖 Vet Clinic <a name="about-project"></a>
 
-**Vet Clinic:** The vet_clinic project is a software application designed to manage a veterinary clinic's data. It utilizes PostgreSQL as the underlying database system. By installing PostgreSQL and following the provided instructions in the project repository, you will be able to set up the necessary database schema, populate it with data, and execute predefined queries to retrieve specific information from the tables. This project aims to facilitate the efficient management and retrieval of veterinary clinic-related data, enabling streamlined operations within a clinic environment.
+**Vet Clinic:** The vet clinic project is a software application designed to manage a veterinary clinic's data. It utilizes PostgreSQL as the underlying database system. By installing PostgreSQL and following the provided instructions in the project repository, you will be able to set up the necessary database schema, populate it with data, and execute predefined queries to retrieve specific information from the tables. This project aims to facilitate the efficient management and retrieval of veterinary clinic-related data, enabling streamlined operations within a clinic environment.
 
 ## 🛠 Built With <a name="built-with"></a>
 
