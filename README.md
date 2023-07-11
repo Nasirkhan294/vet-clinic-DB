@@ -4,7 +4,9 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 - Use [schema.sql](./schema.sql) to create all tables.
 - Use [data.sql](./data.sql) to populate tables with sample data.
-- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
+- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. 
+
+**Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
 
 <a name="readme-top"></a>
 
@@ -141,9 +143,10 @@ Absolutely! Please feel free to fork and reuse this repository for your own proj
 Definitely! We welcome any improvements or new ideas you may have. If your changes are good and align with the project's goals, we would be happy to accept them.
 
 - **How to install postgresSQL?**
+
 Visit the link below and follow the instructions:
 
--[] [Postgresql](https://www.postgresql.org/download/)
+[https://www.postgresql.org/download](https://www.postgresql.org/download/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
