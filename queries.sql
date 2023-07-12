@@ -105,3 +105,15 @@ SELECT
 	*
 FROM
 	animals;
+
+BEGIN;
+
+DElETE FROM
+	animals;
+
+ROLLBACK;
+
+SELECT
+	*
+FROM
+	animals;
