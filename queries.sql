@@ -228,12 +228,12 @@ ADD
 	CONSTRAINT fk_owners FOREIGN KEY (owners_id) REFERENCES owners(id) ON DElETE CASCADE;
 
 SELECT
-	animals.name
+	*
 FROM
 	animals
-	JOIN owners ON animals.owners_id = owners.id
+	LEFT JOIN owners ON animals.owner_id = owners.id
 WHERE
-	owners.full_name = 'Melody Pond';
+	full_name = 'Melody Pond';
 
 SELECT
 	a.name
