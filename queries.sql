@@ -196,3 +196,32 @@ WHERE
 	AND '2000-01-01'
 GROUP BY
 	species;
+
+-- Create owners table
+CREATE TABLE owners(
+	id serial PRIMARY KEY,
+	full_name varchar(255),
+	age INT,
+);
+
+-- Create species table
+CREATE TABLE species(id serial PRIMARY KEY, name varchar(255));
+
+-- Drop/delete species column from animals table
+ALTER TABLE
+	animals DROP COLUMN species;
+
+-- Connect species table into animals table
+ALTER TABLE
+	animals
+ADD
+	species_id INT,
+ADD
+	CONSTRAINT fk_species FOREIGN KEY (species_id) REFERENCES species(id) ON DElETE CASCADE;
+-- Connect owners table into animals table
+ALTER TABLE
+	animals
+ADD
+	owners_id INT,
+ADD
+	CONSTRAINT fk_owners FOREIGN KEY (owners_id) REFERENCES owners(id) ON DElETE CASCADE;
