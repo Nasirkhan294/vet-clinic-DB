@@ -218,6 +218,7 @@ ADD
 	species_id INT,
 ADD
 	CONSTRAINT fk_species FOREIGN KEY (species_id) REFERENCES species(id) ON DElETE CASCADE;
+
 -- Connect owners table into animals table
 ALTER TABLE
 	animals
@@ -225,3 +226,67 @@ ADD
 	owners_id INT,
 ADD
 	CONSTRAINT fk_owners FOREIGN KEY (owners_id) REFERENCES owners(id) ON DElETE CASCADE;
+
+SELECT
+	animals.name
+FROM
+	animals
+	JOIN owners ON animals.owners_id = owners.id
+WHERE
+	owners.full_name = 'Melody Pond';
+
+SELECT
+	a.name
+FROM
+	animals AS a
+	JOIN species AS s ON a.species_id = s.id
+WHERE
+	s.name = 'Pokemon';
+
+SELECT
+	o.full_name,
+	a.name
+FROM
+	owners o
+	LEFT JOIN animals a ON o.id = a.owners_id;
+
+SELECT
+	s.name AS species_name,
+	COUNT(*) AS animal_count
+FROM
+	animals a
+	JOIN species s ON a.species_id = s.id
+GROUP BY
+	s.name;
+
+SELECT
+	a.name
+FROM
+	animals a
+	JOIN owners o ON a.owners_id = o.id
+	JOIN species s ON a.species_id = s.id
+WHERE
+	o.full_name = 'Jennifer Orwell'
+	AND s.name = 'Digimon';
+
+SELECT
+	a.name
+FROM
+	animals a
+	JOIN owners o ON a.owners_id = o.id
+WHERE
+	o.full_name = 'Dean Winchester'
+	AND a.escape_attempts = 0;
+
+SELECT
+	o.full_name,
+	COUNT(*) AS animal_count
+FROM
+	owners o
+	JOIN animals a ON o.id = a.owners_id
+GROUP BY
+	o.full_name
+ORDER BY
+	COUNT(*) DESC
+LIMIT
+	1;
